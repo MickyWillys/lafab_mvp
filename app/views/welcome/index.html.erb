@@ -1,5 +1,15 @@
 <h1>Welcome#index</h1>
-	<% if account_signed_in? %>
-		<%= @user.name%>
-	<% end %>
+	<% if current_account != nil %>
+		<% if @user.name != "" %>
+			<%= @user.name %>
+		<% else %>
+				<%= form_for(@user) do |f| %>
+	      
+				<%= f.label "Avec mon nom c'est mieux" %>
+				<%= f.text_field :name %>
+
+				<%= f.submit "GoGOGO", class: "button [radius round]"%>
+				<% end %>
+		<%end%>
+	<%end%>
 <p>A plus dans le bus</p>
