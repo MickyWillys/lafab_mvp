@@ -1,0 +1,10 @@
+%h1 Welcome#index
+- if current_account != nil
+  - if @user.name != ""
+    = @user.name
+  - else
+    = form_for(@user) do |f|
+      = f.label "Avec mon nom c'est mieux"
+      = f.text_field :name
+      = f.submit "GoGOGO", class: "button [radius round]"
+%p A plus dans le bus

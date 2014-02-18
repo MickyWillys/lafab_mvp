@@ -10,7 +10,6 @@ class WelcomeController < ApplicationController
 
   	if account_signed_in? then
 	  	@account = current_account
-	  	# binding.pry
 	  	@user = User.find(@account.user_id) unless signup
 	end
   end

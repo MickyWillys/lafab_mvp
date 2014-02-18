@@ -35,6 +35,14 @@ end
 gem 'devise'
 gem 'pry'
 gem 'foundation-rails'
+gem 'haml' 
+gem 'guard'
+
+
+group :development do
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
