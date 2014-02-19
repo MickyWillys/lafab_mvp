@@ -1,15 +1,15 @@
 .off-canvas-wrap
   .inner-wrap
-    %nav.tab-bar.menunav
+    %nav.tab-bar
       %section.left.large-5.columns
-        %h4.title La Fabriq
-        %h6 fabriquons du tissus économique local
+        %h3 La Fabriq
+        %h4 fabriquons du tissus économique local
       %section.middle.large-6.columns
         .row.collapse
           .large-9.small-10.columns
             %input{placeholder: "Find Stuff", type: "text"}/
           .large-3.small-2.columns
-            %a.alert.button{href: "#"} Search
+            %a.alert.button.postfix{href: "#"} Search
       %section.right.large-1.columns
         %a.right-off-canvas-toggle.menu-icon
           %span
@@ -29,31 +29,3 @@
 
 
 
-
-
-
-
-/ .fixed
-/   %nav.top-bar{"data-topbar" => ""}
-/     %ul.title-area
-/       %li.name
-/         = link_to root_path do
-/           %h1 La Fabriq
-/           %h3 Fabriquons du tissu économique local
-
-/       %li.toggle-topbar.menu-icon
-/         %a{href: "#"} Menu
-/     %section.top-bar-section
-/       / Right Nav Section
-/       %ul.right
-/         %li.active
-/           %a{href: "#"} Right Button Active
-/         %li.has-dropdown
-/           %a{href: "#"} Right Button with Dropdown
-/           %ul.dropdown
-/             %li
-/               %a{href: "#"} First link in dropdown
-/       / Left Nav Section
-/       %ul.left
-/         %li
-/           %a{href: "#"} Left Nav Button
