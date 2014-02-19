@@ -1,0 +1,32 @@
+!!!
+%html{ lang: "en" }
+	%head
+		%meta{ charset: "utf-8" }/
+		%meta{ name: "viewport", content: "width=device-width, initial-scale: 1.0" }/
+		%title= content_for?(:title) ? yield(:title) : "LaFab_mvp"
+		= stylesheet_link_tag "application"
+		= javascript_include_tag "vendor/modernizr"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+
+		%body
+			
+			%p.notice
+				=notice
+			%p.alert
+				=alert
+			.log-stuff
+				- if account_signed_in?
+					= link_to "Log out", destroy_account_session_path, method: :delete
+				- else
+					= link_to "Sign up", new_account_registration_path
+					= link_to "Sign in", new_account_session_path
+
+			.test
+				%p "Hello user...Alors on danse?"
+
+
+
+
+			= yield
+				
