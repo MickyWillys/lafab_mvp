@@ -13,11 +13,19 @@
 	%li
 		.row.prez
 			.row 
-				=image_tag "plus.png"
-			.row 2
+				%h2 L'app de la Fabriq
+			.row
+				%ul
+					%li Intégrer un réseau de proximité
+					%li De la visibilité pour vos compétences
+					%li Suivez l'actualité de votre Fabriq
+					%li Intégrer les poles de compétences
+					%li Trouver des compétences autour de vous
 			.row 
-				.large-6.columns A
-				.large-6.columns B
+				.large-6.columns
+					= link_to "visite guidée", "#", class:"button [radius round]"
+				.large-6.columns
+					= link_to "Devenez FabriQant", "#", class:"button [radius round]"
 
 
 	%li
