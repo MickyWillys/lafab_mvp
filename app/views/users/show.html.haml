@@ -1,2 +1,11 @@
+.row
+	= @user.picture_name
+	= cl_image_tag(@user.picture_name)
 %h1 
 	= @user.name
+	
+
+/ = render 'image_box',                                            
+/   :upload => @uploads[:picture_image],                                   
+/   :description => 'Fill 200x150',                                
+/   :options => { :width => 200, :height => 150, :crop => "fill" } 

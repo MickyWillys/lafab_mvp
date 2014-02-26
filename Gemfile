@@ -37,6 +37,8 @@ gem 'pry'
 gem 'foundation-rails'
 gem 'haml' 
 gem 'guard'
+gem 'cloudinary'
+
 
 
 group :development do

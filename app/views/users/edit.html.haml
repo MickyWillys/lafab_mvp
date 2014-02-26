@@ -1,0 +1,7 @@
+= form_for @user, url: {action: "update"}, html: {class: "nifty_form"} do |f|
+	= f.text_field :name
+	
+	= f.file_field :picture
+
+
+	= f.submit "Create"

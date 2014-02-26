@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lafabriq-net
+  api_key: '994528218761122'
+  api_secret: 5Edh7jVS3u1oEAIfRDNFJh5mBEk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: lafabriq-net
+  api_key: '994528218761122'
+  api_secret: 5Edh7jVS3u1oEAIfRDNFJh5mBEk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: lafabriq-net
+  api_key: '994528218761122'
+  api_secret: 5Edh7jVS3u1oEAIfRDNFJh5mBEk
+  enhance_image_tag: true
+  static_image_support: false
