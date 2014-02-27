@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
 
 	def show
-		@user = current_user	
+		@user = User.find(params[:id])	
 	end
 
 	def update
 		user = current_user
 		
 		unless params[:user][:picture].nil?
-			p = params[:user][:picture].original_filename
-			ext = p[p.index('.').. p.length]
+			ext = "." + params[:user][:picture].original_filename.split(".")[1]
 			image_path = params[:user][:picture].path
 			user.upload_images(image_path, ext)
 		end

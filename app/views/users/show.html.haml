@@ -1,6 +1,6 @@
 .row
 	= @user.picture_name
-	= cl_image_tag(@user.picture_name)
+	= cl_image_tag(@user.picture_name, :width => 100, :height => 130, :crop => :fill)
 %h1 
 	= @user.name
 	

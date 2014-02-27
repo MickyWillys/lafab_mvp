@@ -1,19 +1,31 @@
-.off-canvas-wrap
+.off-canvas-wrap.check
   .inner-wrap
     %nav.tab-bar
       %section.left.large-5.columns
         %h3 La Fabriq
         %h4 fabriquons du tissus économique local
-      %section.middle.large-6.columns
+      %section.middle.large-5.columns
         .row.collapse
           .large-9.small-10.columns
             %input{placeholder: "Find Stuff", type: "text"}/
           .large-3.small-2.columns
             %a.alert.button.postfix{href: "#"} Search
-      %section.right.large-1.columns
+        .row
+          .large-9.small-10.columns
+            = User.find(current_account.user_id).name
+          .large-3.small-2.columns
+            = current_account.user_id
+
+      %section.right.large-2.columns
         %a.right-off-canvas-toggle.menu-icon
           %span
-    
+
+          .log-stuff.check
+            - if account_signed_in?
+              = link_to "Log out", destroy_account_session_path, method: :delete
+            - else
+              = link_to "Sign up", new_account_registration_path
+              = link_to "Sign in", new_account_session_path
     %aside.right-off-canvas-menu
       %ul.off-canvas-list
         %li

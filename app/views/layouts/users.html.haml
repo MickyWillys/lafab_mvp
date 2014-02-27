@@ -11,20 +11,7 @@
 
 		%body
 			
-			%p.notice
-				=notice
-			%p.alert
-				=alert
-			.log-stuff
-				- if account_signed_in?
-					= link_to "Log out", destroy_account_session_path, method: :delete
-				- else
-					= link_to "Sign up", new_account_registration_path
-					= link_to "Sign in", new_account_session_path
-
-			.test
-				%p "Hello user...Alors on danse?"
-
+			
 
 
 
