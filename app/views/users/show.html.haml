@@ -4,12 +4,16 @@
 	.large-9.columns
 		%h1= @user.name
 .row.check2
-	.small-3.large-2.columns
+	.small-3.large-2.columns.sidemenu
 		%ul.large-block-grid
-			%li Block Grid Item
-			%li Block Grid Item
-			%li Block Grid Item
-			%li Block Grid Item
+			%li.iconmenu 
+				= image_tag("people_territory.png",:width => 75, :height => 75)
+			%li.iconmenu
+				= link_to(image_tag("maker.png",:width => 75, :height => 75), root_path)
+			%li.iconmenu 
+				= image_tag("calendar.png",:width => 75, :height => 75)
+			%li.iconmenu 
+				= image_tag("details.png",:width => 75, :height => 75)
 			%li Block Grid Item
 
 	.small-9.large-10.columns
