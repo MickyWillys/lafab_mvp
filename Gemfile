@@ -39,6 +39,7 @@ gem 'haml'
 gem 'guard'
 gem 'cloudinary'
 gem 'faker'
+gem 'acts-as-taggable-on'
 
 
 

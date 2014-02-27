@@ -8,12 +8,12 @@ namespace :db do
 end 
 
 namespace :db do
-  desc "Fill database with sample data"
+  desc "Fill rdatabase with sample data"
   task tag: :environment do
 
     tags = ["computer", "sport", "DIY", "science", "hobby", "leisure", "job"]
     @skills = Skill.all
-   @skills.each do |s|
+    @skills.each do |s|
       r = rand(1..3)
       r.times do
         t= rand(1..7)
