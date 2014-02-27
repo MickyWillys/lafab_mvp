@@ -1,11 +1,25 @@
 .row
-	= @user.picture_name
-	= cl_image_tag(@user.picture_name, :width => 100, :height => 130, :crop => :fill)
-%h1 
-	= @user.name
-	
+	.large-3.columns
+		= cl_image_tag(@user.picture_name, :width => 100, :height => 130, :crop => :fill)
+	.large-9.columns
+		%h1= @user.name
+.row.check2
+	.small-3.large-2.columns
+		%ul.large-block-grid
+			%li Block Grid Item
+			%li Block Grid Item
+			%li Block Grid Item
+			%li Block Grid Item
+			%li Block Grid Item
 
-/ = render 'image_box',                                            
-/   :upload => @uploads[:picture_image],                                   
-/   :description => 'Fill 200x150',                                
-/   :options => { :width => 200, :height => 150, :crop => "fill" } 
+	.small-9.large-10.columns
+		%h1 competences
+		
+		= render @skills
+
+.row
+	.small-2.large-4.columns A
+	.small-4.large-4.columns B
+	.small-6.large-4.columns C
+
+

@@ -38,6 +38,7 @@ gem 'foundation-rails'
 gem 'haml' 
 gem 'guard'
 gem 'cloudinary'
+gem 'faker'
 
 
 

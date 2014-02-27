@@ -1,7 +1,10 @@
 LafabMvp::Application.routes.draw do
  
+  
+
   devise_for :accounts
   resources :users
+  resources :skills
 
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -12,9 +12,11 @@
             %a.alert.button.postfix{href: "#"} Search
         .row
           .large-9.small-10.columns
-            = User.find(current_account.user_id).name
+            -if account_signed_in?
+              = User.find(current_account.user_id).name
           .large-3.small-2.columns
-            = current_account.user_id
+            -if account_signed_in?
+              = current_account.user_id
 
       %section.right.large-2.columns
         %a.right-off-canvas-toggle.menu-icon
