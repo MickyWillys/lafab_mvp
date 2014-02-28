@@ -1,5 +1,5 @@
-%ul.vcard
-	%li.fn= skill.title
-	%li.street-address= skill.description
-	%li.tag
+%ul.panel.callout.radius
+	%h4= skill.title
+	%p= skill.description
+	.tag
 		= tag_links(skill)

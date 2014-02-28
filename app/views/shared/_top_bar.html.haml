@@ -1,0 +1,23 @@
+.nav
+	.large-5.small-4.columns.top-menu
+		.large-3.small-3.columns
+			= image_tag("logo_fabriq_blanc.png",:width => 100, :height => 100)
+		.large-9.small-9.columns
+			%h3 La Fabriq
+			%p Fabriquons du tissus économique local
+	.large-5.small-5.columns.top-menu
+		.row.collapse.search-bar
+			.large-9.small-10.columns
+				%input{placeholder: "Find Stuff", type: "text"}/
+			.large-3.small-2.columns
+				%a.alert.button.postfix{href: "#"} Search
+	.large-2.small-3.columns.top-menu
+		.row.menu-icon
+			= image_tag("menu.png",:width => 50, :height => 50)
+		.row.log-stuff
+			- if account_signed_in?
+				= link_to "Log out", destroy_account_session_path, method: :delete
+			- else
+				= link_to "Sign up", new_account_registration_path
+				= link_to "Sign in", new_account_session_path
+

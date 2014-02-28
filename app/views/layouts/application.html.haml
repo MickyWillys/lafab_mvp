@@ -14,15 +14,7 @@
 		
 
 		%body.home
-			= render 'shared/menu'
-
-			.test
-				%h2
-			
-				%p "Alors on danse?"
-
-
-
+			= render 'shared/top_bar'
 
 			= yield
 			= javascript_include_tag "application", "data-turbolinks-track" => true	
