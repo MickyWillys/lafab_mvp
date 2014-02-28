@@ -5,9 +5,13 @@
 		%meta{ name: "viewport", content: "width=device-width, initial-scale: 1.0" }/
 		%title= content_for?(:title) ? yield(:title) : "Jobs that MakeSense"
 		= stylesheet_link_tag "application"
+		%link{href: "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css", rel: "stylesheet"}/
 		= javascript_include_tag "vendor/modernizr"
-		= javascript_include_tag "application"
+		%script{src: "http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"}
+		
 		= csrf_meta_tags
+		
+		
 
 		%body.home
 			= render 'shared/menu'
@@ -21,4 +25,4 @@
 
 
 			= yield
-				
+			= javascript_include_tag "application", "data-turbolinks-track" => true	

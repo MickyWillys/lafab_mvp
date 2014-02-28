@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_one :account
 	has_many :skills
+	has_one :location
 	
 	def upload_images (picture_path, ext)
 		
