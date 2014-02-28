@@ -1,0 +1,14 @@
+= form_for @user, url: {action: "update"}, html: {class: "nifty_form"} do |f|
+	= f.label :prenom
+	= f.text_field :prenom
+	= f.label :nom
+	= f.text_field :nom
+	= f.label :tranche_age
+	= f.text_field :tranche_age
+	= f.label :tel_fixe
+	= f.text_field :tel_fixe
+	= f.label :tel_portable
+	= f.text_field :tel_portable
+	= f.label "selectionner une photo avec un beau petit sourire"
+	= f.file_field :picture
+	= f.submit "Create"

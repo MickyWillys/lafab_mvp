@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228081721) do
+ActiveRecord::Schema.define(version: 20140228214427) do
 
   create_table "accounts", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(version: 20140228081721) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "experience"
+    t.string   "diplome"
+    t.datetime "dispo_debut"
+    t.datetime "dispo_fin"
+    t.datetime "statut_validation"
   end
 
   add_index "skills", ["user_id"], name: "index_skills_on_user_id"
@@ -74,6 +79,12 @@ ActiveRecord::Schema.define(version: 20140228081721) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "picture_name"
+    t.string   "prenom"
+    t.string   "nom"
+    t.string   "tranche_age"
+    t.string   "tel_fixe"
+    t.string   "tel_portable"
+    t.string   "role"
   end
 
 end

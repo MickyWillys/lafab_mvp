@@ -1,4 +1,8 @@
-= form_for @user, url: {action: "update"}, html: {class: "nifty_form"} do |f|
-	= f.text_field :name
-	= f.file_field :picture
-	= f.submit "Create"
+.row
+	.large-3.columns
+		= cl_image_tag(@user.picture_name, :width => 100, :height => 130, :crop => :fill)
+	.large-9.columns
+		%h1= @user.name
+.row
+	.small-9.large-9.columns.centered
+		= render "form_user"
