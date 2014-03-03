@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
-
+	def index
+		@users = User.all
+		@users_locations = Array.new(User.count) { Array.new(2) }
+		@users.each do |user|
+			@users_locations[user.id - 1] = [user.location.latitude, user.location.longitude]
+		end
+		# binding.pry
+	end
 	def show
 		@user = User.find(params[:id])
 		# binding.pry
