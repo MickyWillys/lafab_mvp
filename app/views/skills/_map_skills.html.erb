@@ -1,0 +1,20 @@
+<div id="map">
+<script>
+var map = L.map('map')
+var bounds = <%= @skills_locations %> //=> [[lat0, lng0], [lat1, lng1]]
+padded = L.latLngBounds( bounds ).pad(0.042) // returns bigger bounds
+map.fitBounds(padded)
+
+for (var i=1;i<bounds.length;i++)
+{
+	marker = L.marker(bounds[i],{title: i}, {alt: i}).addTo(map);
+}
+
+
+
+L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+          attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OSM</a>',
+          maxZoom: 20
+      }).addTo(map)
+</script>
+</div>

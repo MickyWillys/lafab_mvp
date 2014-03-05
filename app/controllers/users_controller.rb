@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 		@users.each do |user|
 			@users_locations[user.id - 1] = [user.location.latitude, user.location.longitude]
 		end
-		# binding.pry
+		
 	end
 	def show
 		@user = User.find(params[:id])
