@@ -1,6 +1,7 @@
 .container.full-width
 	= render 'map_skills'
 .row
-	%h1 competences
+	%h1
+		= @skills.count.to_s + " competences trouvées"
 
 	= render @skills

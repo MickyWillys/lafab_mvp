@@ -9,8 +9,8 @@ class UsersController < ApplicationController
 	end
 	def show
 		@user = User.find(params[:id])
-		# binding.pry
 		@skills = @user.skills
+		@user_skills = true
 	end
 
 	def edit
@@ -47,6 +47,8 @@ class UsersController < ApplicationController
 	def user_params
 		params.require(:user).permit(:name, :picture_name)
 	end
+
+
 
 	
 end
