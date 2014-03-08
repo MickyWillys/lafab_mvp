@@ -41,6 +41,7 @@ gem 'cloudinary'
 gem 'faker'
 gem 'acts-as-taggable-on'
 gem 'geocoder'
+gem 'mailboxer'
 
 
 

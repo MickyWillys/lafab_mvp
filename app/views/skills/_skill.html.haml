@@ -1,9 +1,5 @@
-%ul.panel.callout.radius
-	%h4
-	- if @user_skills
-		= skill.title
-	- else
-		= @display_position[skill.id].to_s + ". " + skill.title
+%li.panel.callout.radius
+	%h4= skill.title
 
 	%p= skill.description
 	.tag

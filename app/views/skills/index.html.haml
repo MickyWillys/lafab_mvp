@@ -3,5 +3,5 @@
 .row
 	%h1
 		= @skills.count.to_s + " competences trouvées"
-
-	= render @skills
+	
+	%ol= render @skills

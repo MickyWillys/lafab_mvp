@@ -5,6 +5,22 @@ LafabMvp::Application.routes.draw do
   devise_for :accounts
   resources :users
   resources :skills
+  resources :messages do
+    member do
+      post :new
+    end
+  end
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+   collection do
+      get :trashbin
+      post :empty_trash
+   end
+  end
 
   
   # The priority is based upon order of creation: first created -> highest priority.

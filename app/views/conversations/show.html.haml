@@ -1,0 +1,12 @@
+= conversation.subject
+A conversation with
+- conversation.participants.each do |participant|
+	- if participant != @user
+		= link_to participant.name, participant
+		= content_tag_for(:li, conversation.receipts_for(@user)) do |receipt|
+			- message = receipt.message
+			%strong= message.sender.name + " :"
+			= message.body 
+
+		= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p")
+= render 'messages/form', conversation: conversation
