@@ -19,14 +19,35 @@ end
 
 def show
 	@skill = Skill.find(params[:id])
-	@location = @skill.skills_locationstion
+	@location = @skill.location
 	@bound = [@location.latitude, @location.longitude]
 	@bounds = [[48.86473789999999 , 2.3898164],@bound]
 	# binding.pry
 end
+
+	def edit
+		@skill = Skill.find(params[:id])
+	end
+
+	def update
+		@skill = Skill.find(params[:id])
+
+		if @skill.update_attributes(skill_params)
+			flash[:success] = "Profile updated"
+			redirect_to @skill
+		end
+	end
+
+
+
+
 private
   def skill_params
     params.require(:skill).permit(:title, :description, :tag_list)
+  end
+
+  def allow_update
+  	
   end
 
 end

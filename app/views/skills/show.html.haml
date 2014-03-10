@@ -1,2 +1,9 @@
 .container.full-width
 	= render 'map'
+.row
+	%li.panel.callout.radius
+	%h4= @skill.title
+
+	%p= @skill.description
+	.tag
+		= tag_links(@skill)

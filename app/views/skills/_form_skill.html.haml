@@ -1,0 +1,10 @@
+= form_for @skill, url: {action: "update"}, html: {class: "nifty_form"} do |f|
+	= f.label :title
+	= f.text_field :title
+	= f.label :description
+	= f.text_field :description
+	/ = f.label :tranche_age
+	/ = f.text_field :tranche_age
+	/ = f.label "selectionner une photo avec un beau petit sourire"
+	/ = f.file_field :picture
+	= f.submit "Create"
