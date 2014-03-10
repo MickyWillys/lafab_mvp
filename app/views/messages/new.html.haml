@@ -1,9 +1,9 @@
 Send a message to
-= @user.name
+= @rec.name
 = form_tag({controller: "messages", action: "create"}, method: "post") do
   = label_tag :subject
   = text_field_tag :subject
   = label :body, "Message text"
   = text_area_tag :body
-  = hidden_field_tag(:user, "#{@user.id}")
+  = hidden_field_tag(:user, @rec.id.to_s)
   = submit_tag 'Send message', class: "btn btn-primary"

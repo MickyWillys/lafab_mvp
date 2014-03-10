@@ -42,12 +42,14 @@ gem 'faker'
 gem 'acts-as-taggable-on'
 gem 'geocoder'
 gem 'mailboxer'
+gem 'public_activity'
 
 
 
 group :development do
   gem 'guard-livereload', require: false
   gem "rack-livereload"
+  gem 'quiet_assets'
 end
 
 # Use ActiveModel has_secure_password
